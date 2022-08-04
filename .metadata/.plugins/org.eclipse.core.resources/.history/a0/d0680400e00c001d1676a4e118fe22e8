@@ -1,0 +1,29 @@
+package com.example.VoitureManager.bll;
+
+import java.util.List;
+
+
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+import com.example.VoitureManager.bo.ParkingPleinException;
+
+
+
+public interface ParkManager {
+
+	public Car getCarById(Integer id);
+	public Park getParkById(Integer id);
+	public void addCar(Car car);
+	public void delCar(Car car);
+	public void addPark(Park park);
+	public void delPark(Park park);
+	public void addCarToPark(Car car, Park park) throws ParkingPleinException;
+	public void removeCarFromPark(Car car, Park park);
+	public List<Park> getAllParks();
+	public List<Car> getAllCar();
+	public List<Car> getAllCarByPark(Park park);
+	
+	
+
+
+}

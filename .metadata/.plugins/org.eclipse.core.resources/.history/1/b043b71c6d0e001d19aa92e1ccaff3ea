@@ -1,0 +1,5 @@
+package com.example.Potager.ihm;
+
+public class PotagerException extends Exception {
+
+}

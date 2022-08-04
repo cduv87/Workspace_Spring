@@ -1,0 +1,23 @@
+package com.example.VoitureManager.bo;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import fr.formation.calculatriceWeb.bo.Calcul;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class Voiture {
+
+	@Id
+	@GeneratedValue
+	private Integer idCar;
+	private String brand;
+	private String model;
+	
+	
+}

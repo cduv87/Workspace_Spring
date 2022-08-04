@@ -1,0 +1,19 @@
+package com.example.VoitureManager.bll;
+
+import java.util.List;
+
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+
+public interface ParkManager {
+	
+	public void addCarToPark(Car car, Park park);
+	public void removeCarFromPark(Car car, Park park);
+	public List<Park> getAllParks();
+	public List<Car> getAllCar();
+	public List<Car> getAllCarByPark(Park park);
+	
+	
+
+
+}

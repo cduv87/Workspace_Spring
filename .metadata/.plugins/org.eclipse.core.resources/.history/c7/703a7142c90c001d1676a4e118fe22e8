@@ -1,0 +1,41 @@
+package com.example.VoitureManager.bll;
+
+import java.util.List;
+
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+
+public class ParkingManagerImpl implements ParkManager {
+
+	@Override
+	public void addCarToPark(Car car, Park park) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeCarFromPark(Car car, Park park) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Park> getAllParks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Car> getAllCar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Car> getAllCarByPark(Park park) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

@@ -1,0 +1,34 @@
+package com.example.VoitureManager.bo;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+public class Car {
+
+	@Id
+	@GeneratedValue
+	private Integer idCar;
+	private String brand;
+	private String model;
+	
+	@ManyToOne
+	@JsonBackReference
+	private Park park;
+	
+	public Car(String brand, String model) {
+		super();
+		this.brand = brand;
+		this.model = model;
+	}
+
+}

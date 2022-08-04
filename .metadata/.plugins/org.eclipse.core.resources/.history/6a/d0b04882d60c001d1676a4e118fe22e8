@@ -1,0 +1,29 @@
+package com.example.VoitureManager;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.VoitureManager.bll.ParkingManagerImpl;
+
+@SpringBootApplication
+public class VoitureManagerApplication implements CommandLineRunner {
+	
+	@Autowired
+	ParkingManagerImpl parkingManager;
+	
+	public static void main(String[] args)  {
+		SpringApplication.run(VoitureManagerApplication.class, args);
+	}
+
+	@Override
+	@Transactional
+	public void run(String... args) throws Exception {
+		
+		
+	}
+
+}

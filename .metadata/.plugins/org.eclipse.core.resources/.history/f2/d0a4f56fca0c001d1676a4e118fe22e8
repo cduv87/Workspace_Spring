@@ -1,0 +1,90 @@
+package com.example.VoitureManager.bll;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+import com.example.VoitureManager.dao.CarDAO;
+import com.example.VoitureManager.dao.ParkingDAO;
+
+import fr.formation.calculatriceWeb.bo.Calcul;
+@Service
+public class ParkingManagerImpl implements ParkManager {
+	
+	@Autowired
+	ParkingDAO parkDAO;
+	
+	@Autowired
+	CarDAO carDAO;
+
+	@Override
+	public void addCarToPark(Car car, Park park) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeCarFromPark(Car car, Park park) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Park> getAllParks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Car> getAllCar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Car> getAllCarByPark(Park park) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addCar(Car car) {
+		carDAO.save(car);
+		
+	}
+
+	@Override
+	public void delCar(Car car) {
+		carDAO.delete(car);
+		
+	}
+
+	@Override
+	public void addPark(Park park) {
+		parkDAO.save(park);
+		
+	}
+
+	@Override
+	public void delPark(Park park) {
+		parkDAO.delete(park);		
+	}
+
+	@Override
+	public Car getCarById(Integer id) {
+		
+			return carDAO.findById(id).orElse(null);
+
+	}
+
+	@Override
+	public Park getParkById(Integer id) {
+		
+		return parkDAO.findById(id).orElse(null);
+	}
+
+
+}

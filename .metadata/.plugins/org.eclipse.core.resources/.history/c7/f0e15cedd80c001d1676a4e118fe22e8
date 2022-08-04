@@ -1,0 +1,67 @@
+package com.example.VoitureManager;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.VoitureManager.bll.ParkingManagerImpl;
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+
+@SpringBootApplication
+public class VoitureManagerApplication implements CommandLineRunner {
+	
+	@Autowired
+	ParkingManagerImpl parkingManager;
+	
+	public static void main(String[] args)  {
+		SpringApplication.run(VoitureManagerApplication.class, args);
+	}
+
+	@Override
+	@Transactional
+	public void run(String... args) throws Exception {
+		
+		Car c1 = new Car("Peugeot", "206");
+		Car c2 = new Car("Peugeot", "106");
+		Car c3 = new Car("Peugeot", "405");
+		Car c4 = new Car("Peugeot", "2008");
+		Car c5 = new Car("Renault", "5");
+		Car c6 = new Car("Renault", "Clio");
+		Car c7 = new Car("Tesla", "Model S");
+		Car c8 = new Car("Ferrari", "Enzo");
+		Car c9 = new Car("Ford", "F250");
+		Car c10 = new Car("Toyota", "Hilux");
+		
+		Park p1 = new Park("Quimper Park", 4);
+		Park p2 = new Park("Brest Park", 4);
+		Park p3 = new Park("Crozon Park", 4);
+		
+		parkingManager.addCar(c1);
+		parkingManager.addCar(c2);
+		parkingManager.addCar(c3);
+		parkingManager.addCar(c4);
+		parkingManager.addCar(c5);
+		parkingManager.addCar(c6);
+		parkingManager.addCar(c7);
+		parkingManager.addCar(c8);
+		parkingManager.addCar(c9);
+		parkingManager.addCar(c10);
+		
+		parkingManager.addPark(p1);
+		parkingManager.addPark(p2);
+		parkingManager.addPark(p3);
+		
+		parkingManager.addCarToPark(c1, p1);
+		parkingManager.addCarToPark(c2, p1);
+		parkingManager.addCarToPark(c3, p1);
+		parkingManager.addCarToPark(c4, p1);
+		parkingManager.addCarToPark(c5, p1);
+		
+		
+	}
+
+}

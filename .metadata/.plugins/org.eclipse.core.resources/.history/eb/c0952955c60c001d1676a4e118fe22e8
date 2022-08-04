@@ -1,0 +1,5 @@
+package com.example.VoitureManager.bo;
+
+public class Park {
+
+}

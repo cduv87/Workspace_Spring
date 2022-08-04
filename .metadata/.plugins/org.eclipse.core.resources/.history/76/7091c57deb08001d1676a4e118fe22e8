@@ -1,0 +1,12 @@
+package com.example.Potager.bll;
+
+import com.example.Potager.bo.Carre;
+import com.example.Potager.bo.Potager;
+
+public interface PotagerManager {
+	
+	public void addCarreToPotager(Carre carre);
+	public void addPotager(Potager potager);
+	
+
+}

@@ -1,0 +1,32 @@
+package com.example.VoitureManager.bll;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.VoitureManager.bo.Car;
+import com.example.VoitureManager.bo.Park;
+import com.example.VoitureManager.dao.CarDAO;
+import com.example.VoitureManager.dao.ParkingDAO;
+
+
+public interface ParkManager {
+	
+	@Autowired
+	ParkingDAO parkDAO;
+	
+	@Autowired
+	CarDAO carDAO;
+	
+	
+	public void addCarToPark(Car car, Park park);
+	public void removeCarFromPark(Car car, Park park);
+	public List<Park> getAllParks();
+	public List<Car> getAllCar();
+	public List<Car> getAllCarByPark(Park park);
+	
+	
+
+
+}

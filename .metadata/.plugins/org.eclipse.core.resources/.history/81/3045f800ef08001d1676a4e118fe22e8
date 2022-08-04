@@ -1,0 +1,27 @@
+package com.example.Potager;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.Potager.bo.Potager;
+
+@SpringBootApplication
+public class PotagerApplication implements CommandLineRunner {
+
+	public static void main(String[] args) {
+		SpringApplication.run(PotagerApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		System.err.println("***************\nDEBUT AFFICHAGE\n****************");
+		
+		Potager p1 = new Potager()
+		
+		
+		
+	}
+
+}

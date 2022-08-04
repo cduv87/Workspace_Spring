@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:each="parking : ${list}"></div>
+	<span th:text="${parking.nom}"/> </span><span th:text="${parking.capacite}"/></span>
+</div>
+</body>
+</html>

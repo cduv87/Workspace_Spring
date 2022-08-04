@@ -1,0 +1,45 @@
+package com.example.Potager;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.Potager.bll.PotagerManager;
+import com.example.Potager.bo.Potager;
+
+@SpringBootApplication
+public class PotagerApplication implements CommandLineRunner {
+	@Autowired
+	PotagerManager potagerManager;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(PotagerApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		
+		
+		System.err.println("****************\nDEBUT AFFICHAGE\n****************");
+		
+		Potager p1 = new Potager("Lesquidic", "Jardins Philéasiens", 250000, "Gouenac'h");
+		Potager p2 = new Potager("Toul ar C'Hoat", "Clément's Meadows", 800000, "Le Faou");
+		
+		potagerManager.addPotager(p1);
+		potagerManager.addPotager(p2);
+		
+		
+		System.err.println("****************\nLISTE POTAGERS :\n****************");
+		potagerManager.findAllPotager().forEach(System.out::println);
+
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listes des potagers</title>
+</head>
+<body>
+<H1>La liste des potagers</H1>
+<ul>
+	<li th:each="potager : ${list}">
+		<span th:text="${potager.location}" />
+		<span th:text="${potager.nom}" />
+		<span th:text="${potager.surface}" />
+		<span th:text="${potager.ville}" />
+		
+<!-- 		<a th:href="@{/biere/del/{id}(id=${biere.idBiere})}">X</a>
+		<a th:href="@{/biere/mod/{id}(id=${biere.idBiere})}">M</a> -->
+	</li>
+</ul>
+<!-- <a href="/biere/add">ajout</a> -->
+</body>
+</html>

@@ -1,0 +1,5 @@
+package fr.formation.parking.ihm;
+
+public class ParkController {
+
+}
